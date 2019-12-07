@@ -37,14 +37,14 @@ func watch() {
 	}()
 	res, err := _request(watchUrl)
 	if err != nil {
-		log.Println("监控mbp失败:", err.Error())
-		notifyWechat("监控mbp失败", err.Error()+"\n"+watchUrl)
+		log.Println("监控商品失败:", err.Error())
+		notifyWechat("监控商品失败", err.Error()+"\n"+watchUrl)
 		return
 	}
 	if !strings.Contains(res, "200") {
-		msg := "监控mbp失败:返回结果不是200"
+		msg := "监控商品失败:返回结果不是200"
 		log.Println(msg)
-		notifyWechat("监控mbp结果非200失败", watchUrl)
+		notifyWechat("监控商品结果非200失败", watchUrl)
 		return
 	}
 	if strings.Contains(res, "脱销") {
