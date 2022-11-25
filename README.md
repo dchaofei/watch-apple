@@ -5,8 +5,10 @@
 # 配置文件 config.json
 ```json
 {
-  "serverKey": "", // Server酱通知微信key,不填则不通知微信
-  "watchUrl": "https://www.apple.com.cn/cn-k12/shop/delivery-message?parts.0=G0W53CH%2FA", // 打开商品，打开控制台，刷新页面，复制异步请求的这个url,记得去掉后边的时间戳
-  "goodsUrl": "https://www.apple.com.cn/cn-k12/shop/product/G0W53CH/A?fnode=82c65a2ad3bfc35c5451e4561b930167fc6b5c9206bde95e29fffc095a26ca15d3cce09504e07e247561cb9af06f3b5f4523847992aebd57d42368da886f8040ce2c1c35b52e323a206464448e2bba2f" // 浏览器打开商品，复制链接
+  "push_plus_token": "", // pushplus 通知 token,不填则不通知微信
+  
+  //打开浏览器控制台，然后刷新要买的 apple 翻新产品，应该能看到会发起一个 /shop/fulfillment-messages 异步请求，把完整链接复制到这里就行
+  "watchUrl": "https://www.apple.com.cn/shop/fulfillment-messages?little=false&parts.0=FU0Q2CH/A&mts.0=regular&fts=true",
+  "goodsUrl": "https://www.apple.com.cn/shop/product/FU0X2CH/A?fnode=112db2e59016208309c3c507e114dc5b2d03538c81ffa60b01f08b0ebe7e4fe2e26318603270c010447d515dea3124861b6145541b0fb16faf39d9b9a2629908e387a438ae8a5e8a48e956ee9ce0001c" // 浏览器打开商品，复制链接
 }
 ```
